@@ -1,0 +1,40 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/checkhealth": {
+            "get": {
+                "description": "探针路由",
+                "summary": "反欺诈系统探针接口",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/controllers.Resp"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "controllers.Resp": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "description": "应答码",
+                    "type": "integer"
+                },
+                "data": {
+                    "description": "应答数据"
+                },
+                "msg": {
+                    "description": "应答信息",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
